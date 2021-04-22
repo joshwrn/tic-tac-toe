@@ -1,0 +1,169 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  color: var(--page-heading-color);
+}
+
+button {
+  cursor: pointer;
+}
+
+:root {
+  --color-one: black;
+  --color-two: white;
+  --select-hidden: visible;
+}
+
+html {
+}
+
+body {
+  background-image: url(photos/trees.jpg);
+  background-size: cover;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: var(--color-one);
+  font-family: "Inconsolata", monospace;
+}
+
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+#center {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#container {
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr;
+  border: 1px solid rgba(0, 119, 255, 0);
+  width: 35vw;
+  height: 35vw;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  border: 1px solid rgba(255, 92, 92, 0);
+  grid-row: 2/3;
+  width: 30vw;
+  height: 30vw;
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  border-radius: 10px;
+  grid-gap: 5px;
+}
+
+#title {
+  align-self: center;
+  color: var(--color-two);
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background: rgba(54, 54, 54, 0);
+  cursor: pointer;
+  border: 1px solid var(--color-two);
+}
+
+#button-bar {
+  display: flex;
+  gap: 30px;
+  position: relative;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.select-button {
+  width: 20%;
+  position: relative;
+  justify-self: center;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid var(--color-two);
+  color: var(--color-two);
+  transition: 0.25s;
+  visibility: var(--select-hidden);
+}
+
+.select-button:hover {
+  background: var(--color-two);
+  color: var(--color-one);
+}
+
+.chosen-cell {
+  font-size: 5vw;
+  text-align: center;
+  color: var(--color-two);
+}
+
+#zero {
+  border-top-left-radius: 10px;
+}
+
+#two {
+  border-top-right-radius: 10px;
+}
+
+#six {
+  border-bottom-left-radius: 10px;
+}
+
+#eight {
+  border-bottom-right-radius: 10px;
+}
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  z-index: -1;
+}
+
+#switch-button {
+  padding: 25px;
+  background: rgba(0, 0, 0, 0);
+  border: rgba(0, 0, 0, 0);
+}
+
+.fas {
+  font-size: 30px;
+  color: var(--color-two);
+}

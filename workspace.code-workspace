@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../Library-App"
+    },
+    {
+      "path": "../etch/etch-a-sketch"
+    },
+    {
+      "path": "../calculator"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "tic-tac-toe"
+  }
+}
