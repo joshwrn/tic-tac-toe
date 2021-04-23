@@ -26,6 +26,7 @@ button {
   --color-one: black;
   --color-two: white;
   --select-hidden: visible;
+  --restart-hidden: hidden;
 }
 
 html {
@@ -110,19 +111,44 @@ img {
 }
 
 .select-button {
-  width: 20%;
+  width: 7.5em;
   position: relative;
   justify-self: center;
   background: rgba(0, 0, 0, 0);
   border: 1px solid var(--color-two);
   color: var(--color-two);
   transition: 0.25s;
+  font-size: 0.8rem;
   visibility: var(--select-hidden);
 }
 
 .select-button:hover {
   background: var(--color-two);
   color: var(--color-one);
+}
+
+#restart-button {
+  position: absolute;
+  width: 7.5em;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid var(--color-two);
+  color: var(--color-two);
+  transition: 0.25s;
+  font-size: 0.8rem;
+  visibility: var(--restart-hidden);
+}
+
+#restart-button:hover {
+  background: var(--color-two);
+  color: var(--color-one);
+}
+
+#round-status {
+  color: var(--color-two);
+  visibility: var(--restart-hidden);
+  position: absolute;
+  margin-top: 30px;
+  font-size: 1rem;
 }
 
 .chosen-cell {
