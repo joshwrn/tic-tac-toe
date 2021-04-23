@@ -29,9 +29,6 @@ button {
   --restart-hidden: hidden;
 }
 
-html {
-}
-
 body {
   background-image: url(photos/trees.jpg);
   background-size: cover;

@@ -116,11 +116,21 @@ const gameboardModule = (function () {
           playerArray.push(parseInt(e.target.getAttribute("data-cell")));
           gameBoard.splice(gameBoard.indexOf(parseInt(dataCell)), 1);
           console.log(`player spliced ${gameBoard}`);
-          //check for win
+          //check for tie
+          if (gameBoard == []) {
+            gameOver = true;
+            root.style.setProperty("--restart-hidden", "visible");
+            roundStatusText.appendChild(document.createTextNode("TIE"));
+          }
           if (checkArrays(playerArray) == "win") {
+            //check for win
             gameOver = true;
             root.style.setProperty("--restart-hidden", "visible");
             roundStatusText.appendChild(document.createTextNode("YOU WIN"));
+          } else if (gameBoard.length == 0) {
+            gameOver = true;
+            root.style.setProperty("--restart-hidden", "visible");
+            roundStatusText.appendChild(document.createTextNode("TIE"));
           } else {
             chooseRandomMove();
             let botSelectedCell = document.querySelector(
